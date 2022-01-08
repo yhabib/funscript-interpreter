@@ -12,8 +12,8 @@ const (
 	EOF     = "EOF"     // Tells the parser that there is nothing to read
 
 	// Identifiers + literals
-	IDENT = "IDENT" // add, foobar, x, y, ...
-	INT   = "INT"   // 1343456
+	IDENTIFIER = "IDENTIFIER" // add, foobar, x, y, ...
+	INT        = "INT"        // 1343456
 
 	// Operators
 	ASSIGN = "="
@@ -31,4 +31,21 @@ const (
 	// Keywords
 	FUNCTION = "FUNCTION"
 	VAR      = "VAR"
+	RETURN   = "RETURN"
+
+	// Types
+	NUMBER = "NUMBER"
 )
+
+var keywords = map[string]TokenType{
+	"var":    VAR,
+	"fun":    FUNCTION,
+	"return": RETURN,
+}
+
+func (tok Token) ResolveType(str string) TokenType {
+	if v, ok := keywords[str]; ok {
+		return v
+	}
+	return IDENTIFIER
+}
