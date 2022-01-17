@@ -18,6 +18,9 @@ const (
 	// Operators
 	ASSIGN = "="
 	PLUS   = "+"
+	MINUS  = "-"
+	MULT   = "*"
+	DIV    = "/"
 
 	// Delimiters
 	COMMA     = ","

@@ -66,3 +66,13 @@ var result = add(two, 3);
 We also need to start thinking about white spaces. We don't care about them but we need to consume them `eatWhitespace` does basically this.
 
 Our interpreter is now able to process this simple program. Next, we will extern our token set to fully support our language.
+
+#### Wrapping Up
+
+Branch: [lexer/final](https://github.com/yhabib/funscript-interpreter/tree/lexer/final)
+
+Now we just need to complete our lexer so it is able to understand the rest of funscript.
+
+First we need to add support to the missing basic operators like `-` or `*`. This should be easy to accomplish as we only have to extend our symbols.
+
+We keep adding non meaningful code to our test case as we still don't care about "correctness". The Lexer only cares about tokens.

@@ -11,7 +11,13 @@ func TestNextToken(t *testing.T) {
 	var add = fun(x, y) {
 		return x + y;
 	}
+
 	var result = add(two, 3);
+
+	1 - 2;
+	1 * 3;
+	5 / 2; 
+	
 	`
 
 	tests := []struct {
@@ -48,6 +54,18 @@ func TestNextToken(t *testing.T) {
 		{token.COMMA, ","},
 		{token.NUMBER, "3"},
 		{token.RPAREN, ")"},
+		{token.SEMICOLON, ";"},
+		{token.NUMBER, "1"},
+		{token.MINUS, "-"},
+		{token.NUMBER, "2"},
+		{token.SEMICOLON, ";"},
+		{token.NUMBER, "1"},
+		{token.MULT, "*"},
+		{token.NUMBER, "3"},
+		{token.SEMICOLON, ";"},
+		{token.NUMBER, "5"},
+		{token.DIV, "/"},
+		{token.NUMBER, "2"},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
