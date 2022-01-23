@@ -80,3 +80,19 @@ We keep adding non meaningful code to our test case as we still don't care about
 We add now the missing keywords, `TRUE`, `FALSE`, `IF` and `ELSE`.
 
 Last but not least, we need to add support to multi-character operators. We need to "peak" into a future value to know if it is one of the operators we support(`==` or `!=`) or not.
+
+### REPL
+
+It stands for Read, Eval, Print, Loop is a tool to talk to an interpreter. Every single interpreted language has at least one REPL, eg: JavaScript, Pyhton, Ruby, ...
+
+The REPL reads input, sends it to the interprater to evaluate it/
+
+#### Basics
+
+Branch: [repl/basic](https://github.com/yhabib/funscript-interpreter/tree/repl/basic)
+
+Our interpreter will take care of the Eval section. We can already start with the other three operations as they don't require our interpreter.
+
+We make use of Go native APIs to read user input from the Standard Input and write back to Standard Output.
+
+We can make use of the Lexer to give some value to *Eval*, so Read-Tokenize-Print-Repeat.
