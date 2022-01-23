@@ -20,6 +20,8 @@ func TestNextToken(t *testing.T) {
 
 	if (true) {}
 	else false;
+	==;
+	!=;
 	
 	`
 
@@ -78,6 +80,10 @@ func TestNextToken(t *testing.T) {
 		{token.RBRACE, "}"},
 		{token.ELSE, "else"},
 		{token.FALSE, "false"},
+		{token.SEMICOLON, ";"},
+		{token.EQUAL, "=="},
+		{token.SEMICOLON, ";"},
+		{token.NOT_EQUAL, "!="},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}

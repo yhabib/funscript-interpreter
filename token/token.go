@@ -16,11 +16,13 @@ const (
 	NUMBER     = "NUMBER"
 
 	// Operators
-	ASSIGN = "="
-	PLUS   = "+"
-	MINUS  = "-"
-	MULT   = "*"
-	DIV    = "/"
+	ASSIGN    = "="
+	PLUS      = "+"
+	MINUS     = "-"
+	MULT      = "*"
+	DIV       = "/"
+	EQUAL     = "=="
+	NOT_EQUAL = "!="
 
 	// Delimiters
 	COMMA     = ","

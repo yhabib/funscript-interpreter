@@ -78,3 +78,5 @@ First we need to add support to the missing basic operators like `-` or `*`. Thi
 We keep adding non meaningful code to our test case as we still don't care about "correctness". The Lexer only cares about tokens.
 
 We add now the missing keywords, `TRUE`, `FALSE`, `IF` and `ELSE`.
+
+Last but not least, we need to add support to multi-character operators. We need to "peak" into a future value to know if it is one of the operators we support(`==` or `!=`) or not.
