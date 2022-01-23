@@ -17,6 +17,9 @@ func TestNextToken(t *testing.T) {
 	1 - 2;
 	1 * 3;
 	5 / 2; 
+
+	if (true) {}
+	else false;
 	
 	`
 
@@ -66,6 +69,15 @@ func TestNextToken(t *testing.T) {
 		{token.NUMBER, "5"},
 		{token.DIV, "/"},
 		{token.NUMBER, "2"},
+		{token.SEMICOLON, ";"},
+		{token.IF, "if"},
+		{token.LPAREN, "("},
+		{token.TRUE, "true"},
+		{token.RPAREN, ")"},
+		{token.LBRACE, "{"},
+		{token.RBRACE, "}"},
+		{token.ELSE, "else"},
+		{token.FALSE, "false"},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}

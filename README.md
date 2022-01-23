@@ -76,3 +76,5 @@ Now we just need to complete our lexer so it is able to understand the rest of f
 First we need to add support to the missing basic operators like `-` or `*`. This should be easy to accomplish as we only have to extend our symbols.
 
 We keep adding non meaningful code to our test case as we still don't care about "correctness". The Lexer only cares about tokens.
+
+We add now the missing keywords, `TRUE`, `FALSE`, `IF` and `ELSE`.
